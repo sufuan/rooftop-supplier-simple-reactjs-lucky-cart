@@ -3,7 +3,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import './Plant.css'
+
 
 
 const Plant = (props) => {

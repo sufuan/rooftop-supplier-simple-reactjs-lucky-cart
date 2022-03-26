@@ -1,7 +1,4 @@
 # Roof Top Tree Supplier
 
-## [git hublink](https://github.com/Programming-Hero-Web-Course4/lucky-one-sufuan)
-
-
-## [ view live site ]()
+## [ view live site ](https://tubular-tartufo-0f2399.netlify.app/)
 
