@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Plant from '../Plant/Plant';
 import CartSection from '../cart/CartSection';
+
 const Plants = () => {
      const handleCart=(plant)=>{
          console.log(plant);
@@ -34,7 +35,6 @@ const Plants = () => {
                     </div>
               </div>
               <div className="col-lg-3">
-                  <h1>total ={cart.length}</h1> 
                 <CartSection cart={cart}></CartSection>)
               
               

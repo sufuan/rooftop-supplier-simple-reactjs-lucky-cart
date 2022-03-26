@@ -1,6 +1,8 @@
 import { Button } from 'bootstrap';
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Plant.css'
 
 
@@ -14,7 +16,7 @@ const Plant = (props) => {
   <Card.Body>
     <Card.Title>{name}</Card.Title>
     <p>price {price}</p>
-    <button onClick={()=>props.handleCart(props.plant)} className='btn btn-primary'>add to cart</button>
+    <button onClick={()=>props.handleCart(props.plant)} className='btn btn-primary'>add to cart < FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
   </Card.Body>
 </Card>
         </div>
