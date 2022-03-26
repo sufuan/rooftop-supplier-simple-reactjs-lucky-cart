@@ -5,7 +5,6 @@ const CartSection = ({cart}) => {
     console.log(cart)
           // get random 
      const [random,setrandom]=useState([])
-    //  const [clearCart,setClearCart]=useState([])
     
       const randomName = cart[Math.floor(Math.random()*cart.length)]
 
