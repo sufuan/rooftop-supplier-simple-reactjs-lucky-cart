@@ -12,7 +12,7 @@ const Plants = () => {
         
     return (
         <div>
-            <div className="row">
+            <div className="row container">
               <div className="col-lg-9">
                     <div className="row">
                     {
@@ -21,7 +21,7 @@ const Plants = () => {
                     </div>
               </div>
               <div className="col-lg-3">
-<h3>jj</h3>
+<h3>jj  jksjdfkfj</h3>
               </div>
                 
             </div>
