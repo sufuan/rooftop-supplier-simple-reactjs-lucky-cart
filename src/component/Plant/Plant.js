@@ -5,7 +5,7 @@ import './Plant.css'
 
 
 const Plant = (props) => {
-    console.log(props.plant.img)
+    console.log()
     const {id, img,price,name}=props.plant
     return (
         <div className='col-lg-4 mb-4'>
@@ -14,7 +14,7 @@ const Plant = (props) => {
   <Card.Body>
     <Card.Title>{name}</Card.Title>
     <p>price {price}</p>
-    <button className='btn btn-primary'>add to cart</button>
+    <button onClick={()=>props.handleCart(props.plant)} className='btn btn-primary'>add to cart</button>
   </Card.Body>
 </Card>
         </div>
