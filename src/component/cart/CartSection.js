@@ -2,18 +2,26 @@ import React, { useState } from 'react';
 
 const CartSection = ({cart}) => {
     console.log(cart)
- 
+          // get random 
      const [random,setrandom]=useState([])
+    //  const [clearCart,setClearCart]=useState([])
     
       const randomName = cart[Math.floor(Math.random()*cart.length)]
-      const selectRandom =()=>{
-       
-        setrandom(randomName)
-         
-      }
 
       let arr=[random]
-      console.log(arr);
+
+      const selectRandom =()=>{
+        setrandom(randomName)
+          }
+    
+  // clear  cart screen 
+      const handleClearCart=(cart)=>{
+        setrandom([])
+      
+      }
+
+       
+     
     return (
         <div>
               {
@@ -24,8 +32,8 @@ const CartSection = ({cart}) => {
               arr.map(r=> <p>you have selected :{r.name}</p> )
             }
            </p>
-           <button className='btn btn-info me-4' onClick={selectRandom} >select random</button> 
-           {/* <button className='btn btn-danger' onClick={handleClearCart}>clear</button> */}
+           <button className='btn btn-info me-4' onClick={selectRandom} >Choose lucky one </button> 
+           <button className='btn btn-danger' onClick={handleClearCart}>clear</button>
 
 {
 cart.map(cart=>cart[Math.floor(Math.random()*cart.length)] )
