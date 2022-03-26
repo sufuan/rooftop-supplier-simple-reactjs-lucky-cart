@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Cartsection.css'
 
 const CartSection = ({cart}) => {
     console.log(cart)
@@ -18,23 +19,25 @@ const CartSection = ({cart}) => {
           }
     
   // clear  cart screen 
-      const handleClearCart=(cart)=>{
-      setrandom([]) 
+
+      const handleClearCart=(e)=>{
+        setrandom([]) 
       }
 
        
      
     return (
-        <div>
+        <div className='carSection'>
             <h4>selected items </h4>
               {
                 cart.map(SelectedName=> <p>{SelectedName.name}</p> )
               }
            <p>
             {
-              arr.map(r=> <p>you have selected :{r.name}</p> )
+              arr.map(r=> <p><b>you have selected :</b> {r.name}</p> )
             }
            </p>
+        
            <button className='btn btn-info me-4' onClick={selectRandom} >Choose lucky one </button> 
            <button className='btn btn-danger' onClick={handleClearCart}>Choose again</button>
 
