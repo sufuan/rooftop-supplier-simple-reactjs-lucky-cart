@@ -9,21 +9,24 @@ const CartSection = ({cart}) => {
       const randomName = cart[Math.floor(Math.random()*cart.length)]
 
       let arr=[random]
+      console.log(arr);
 
       const selectRandom =()=>{
+       if(cart && cart.length){
         setrandom(randomName)
+       }
           }
     
   // clear  cart screen 
       const handleClearCart=(cart)=>{
-        setrandom([])
-      
+      setrandom([]) 
       }
 
        
      
     return (
         <div>
+            <h4>selected items </h4>
               {
                 cart.map(SelectedName=> <p>{SelectedName.name}</p> )
               }
@@ -33,7 +36,7 @@ const CartSection = ({cart}) => {
             }
            </p>
            <button className='btn btn-info me-4' onClick={selectRandom} >Choose lucky one </button> 
-           <button className='btn btn-danger' onClick={handleClearCart}>clear</button>
+           <button className='btn btn-danger' onClick={handleClearCart}>Choose again</button>
 
 {
 cart.map(cart=>cart[Math.floor(Math.random()*cart.length)] )

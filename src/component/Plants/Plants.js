@@ -36,10 +36,7 @@ const Plants = () => {
               </div>
               <div className="col-lg-3">
                 <CartSection cart={cart}></CartSection>)
-              
-              
-            
-              </div>
+             </div>
                 
             </div>
            
