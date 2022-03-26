@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Plant from '../Plant/Plant';
-
+import Cart from '../cart/Cart';
 const Plants = () => {
      const handleCart=(plant)=>{
          console.log(plant);
+         const newCart =[...cart,plant]
+         setCart(newCart)
      }
     const [plants,setPlants]=useState([])
+    const [cart,setCart]=useState([])
+
+
     useEffect(()=>{
         fetch('Plants.json')
         .then(res=>res.json())
@@ -27,7 +32,8 @@ const Plants = () => {
                     </div>
               </div>
               <div className="col-lg-3">
-                     <h3>cart section</h3>
+                  <h1>total ={cart.length}</h1>
+                <Cart cart={cart}></Cart>
               </div>
                 
             </div>
