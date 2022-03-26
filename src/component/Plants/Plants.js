@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Plant from '../Plant/Plant';
-import Cart from '../cart/Cart';
+import CartSection from '../cart/CartSection';
 const Plants = () => {
      const handleCart=(plant)=>{
          console.log(plant);
@@ -11,13 +11,15 @@ const Plants = () => {
     const [cart,setCart]=useState([])
 
 
+
     useEffect(()=>{
         fetch('Plants.json')
         .then(res=>res.json())
         .then(data=>setPlants(data))
     },[])
-        
-    return (
+
+     
+  return (
         <div>
             <div className="row container">
               <div className="col-lg-9">
@@ -32,8 +34,11 @@ const Plants = () => {
                     </div>
               </div>
               <div className="col-lg-3">
-                  <h1>total ={cart.length}</h1>
-                <Cart cart={cart}></Cart>
+                  <h1>total ={cart.length}</h1> 
+                <CartSection cart={cart}></CartSection>)
+              
+              
+            
               </div>
                 
             </div>
